@@ -7,8 +7,10 @@ import axios from 'axios';
 class App extends Component {
 
   componentWillMount() {
-    axios.get('api/test')
-      .then(response => console.log(response))
+   axios.get('https://iss.moex.com/iss/securities.json?q=FXIT')
+     .then(response => console.log(response))
+    // axios.get('https://api.iextrading.com/1.0/stock/aapl/company')
+    //   .then(response => console.log(response))
   }
 
   render() {
